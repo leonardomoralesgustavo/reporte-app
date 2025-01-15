@@ -22,6 +22,21 @@ const pages: IPages[] = [
     icon: "/Images/home.png",
   },
   {
+    title: "Tiempo real",
+    route: "/",
+    icon: "/Images/hora.png",
+  },
+  {
+    title: "Reporte general",
+    route: "/",
+    icon: "/Images/informe.png",
+  },
+  {
+    title: "Resumen ventas",
+    route: "/",
+    icon: "/Images/ventas.png",
+  },
+  {
     title: "Salir",
     route: "/",
     icon: "/Images/exit.png",

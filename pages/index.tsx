@@ -58,7 +58,7 @@ export default function Home() {
       >
         Sistema de reportes de vendedores
       </Typography>
-      <Button
+      {/* <Button
         variant="contained"
         color="primary"
         sx={{
@@ -73,7 +73,7 @@ export default function Home() {
         onClick={handleGenerateReport}
       >
         Generar reporte
-      </Button>
+      </Button> */}
       <SalesReport />
     </Box>
   );
