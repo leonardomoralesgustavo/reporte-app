@@ -1,18 +1,40 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Box, Button, Typography } from "@mui/material";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+declare module "jspdf" {
+  interface jsPDF {
+    autoTable: (options: any) => jsPDF;
+  }
+}
 
 export default function Home() {
+  const handleGenerateReport = () => {
+    const doc = new jsPDF();
+
+    // Título del documento
+    doc.setFontSize(18);
+    doc.text("Venta de Autos al 28 Diciembre 2024 CMC Por paquete", 10, 20);
+
+    // Datos de la tabla
+    const tableColumn = ["Paquete", "Cantidad", "Precio Unitario", "Total"];
+    const tableRows = [
+      ["Paquete A", "10", "$20,000", "$200,000"],
+      ["Paquete B", "5", "$25,000", "$125,000"],
+      ["Paquete C", "8", "$22,000", "$176,000"],
+    ];
+
+    // Generar la tabla
+    doc.autoTable({
+      startY: 30,
+      head: [tableColumn],
+      body: tableRows,
+    });
+
+    // Guardar el PDF
+    doc.save("reporte.pdf");
+  };
+
   return (
     <Box
       display={"flex"}
@@ -43,6 +65,7 @@ export default function Home() {
           borderRadius: 2,
           boxShadow: 3,
         }}
+        onClick={handleGenerateReport}
       >
         Generar reporte
       </Button>
