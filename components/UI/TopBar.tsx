@@ -135,7 +135,7 @@ export const TopBar = () => {
         {/* topbar mobile */}
         <Box
           component={"img"}
-          src="./Icons/bawa-logo.png"
+          src="./Images/logo-chevrolet.png"
           width={"40px"}
           height={"40px"}
           sx={{

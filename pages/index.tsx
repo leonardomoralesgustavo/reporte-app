@@ -45,7 +45,7 @@ export default function Home() {
     >
       <Typography
         sx={{
-          fontSize: 40,
+          fontSize: 20,
           color: "#fff",
           mb: 2,
           fontFamily: "var(--font-geist-sans)",
