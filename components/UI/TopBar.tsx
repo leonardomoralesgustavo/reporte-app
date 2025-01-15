@@ -27,7 +27,7 @@ const pages: IPages[] = [
     icon: "/Images/hora.png",
   },
   {
-    title: "Reporte general",
+    title: "Ventas Modelo",
     route: "/",
     icon: "/Images/informe.png",
   },
