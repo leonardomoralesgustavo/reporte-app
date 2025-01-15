@@ -1,3 +1,4 @@
+import SalesReport from "@/components/table/SalesReport";
 import { Box, Button, Typography } from "@mui/material";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
@@ -41,14 +42,18 @@ export default function Home() {
       flexDirection={"column"}
       alignItems={"center"}
       justifyContent={"center"}
-      height={"100vh"}
+      height={"auto"}
+      gap={4}
     >
       <Typography
         sx={{
-          fontSize: 20,
+          fontSize: { xs: 20, sm: 25 },
           color: "#fff",
           mb: 2,
+          mt: 4,
           fontFamily: "var(--font-geist-sans)",
+          textAlign: "center",
+          px: 2,
         }}
       >
         Sistema de reportes de vendedores
@@ -69,6 +74,7 @@ export default function Home() {
       >
         Generar reporte
       </Button>
+      <SalesReport />
     </Box>
   );
 }
