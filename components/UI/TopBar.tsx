@@ -23,17 +23,20 @@ const pages: IPages[] = [
   },
   {
     title: "Tiempo real",
-    route: "/",
+    route:
+      "https://docs.google.com/spreadsheets/d/1kXxOFkAVgqhTIRBPUzfJFxOqmT6wq83T/edit?usp=drive_link&ouid=103192286556479506020&rtpof=true&sd=true",
     icon: "/Images/hora.png",
   },
   {
     title: "Ventas Modelo",
-    route: "/",
+    route:
+      "https://docs.google.com/spreadsheets/d/1YLJSffliePhv05A85nBMU-VfkuDlHhnd/edit?usp=drive_link&ouid=103192286556479506020&rtpof=true&sd=true",
     icon: "/Images/informe.png",
   },
   {
     title: "Resumen ventas",
-    route: "/",
+    route:
+      "https://docs.google.com/spreadsheets/d/1KOeIfYkbxs3fuQMT6KQkyKdjZIvUgkgf/edit?usp=drive_link&ouid=103192286556479506020&rtpof=true&sd=true",
     icon: "/Images/ventas.png",
   },
   {
